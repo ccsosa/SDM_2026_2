@@ -5,6 +5,7 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - Instalar R
 - Instalar Java
 - Instalar RStudio
+- Instalar Sourcetree
 - Acceso a Dropbox
 - Crear una cuenta de Github (ESTE REPO SE VOLVERÁ PRIVADO)
 - Computadora con al menos 8 GB de RAM
@@ -113,5 +114,5 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 
 ---
 
-> [!NOTA]
+> [!NOTE]
 > Parte del material a usarse ha sido creado para workshops o tutoriales para ONGs creados por Chrystian Sosa, Andrés Mendez y Wanjiku Githu
