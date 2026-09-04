@@ -114,4 +114,4 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 ---
 
 > [!NOTA]
-> Parte del material a usarse ha sido creado para workshops o tutoriales para ONGs
+> Parte del material a usarse ha sido creado para workshops o tutoriales para ONGs creados por Chrystian Sosa, Andrés Mendez y Wanjiku Githu
