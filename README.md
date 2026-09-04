@@ -11,10 +11,8 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - Computadora con al menos 8 GB de RAM
 ---
 # Horarios: Sabados de 8 a 12
-
 > [!AVISO]
 > Archivos pesados estarán en Dropbox
-  
 # Modalidad virtual
 >[ Link clase]
 >Microsoft Teams meeting
@@ -74,7 +72,7 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - viridis
 - usdm
 - raster
-
+- wallace
 # Dudas
 - ccsosa@uniquindio.edu.co
 ---
@@ -98,7 +96,13 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - [Biodiversity informatics: managing and applying primary biodiversity data](https://royalsocietypublishing.org/doi/10.1098/rstb.2003.1439)
 - [Resolution in species distribution models shapes spatial patterns of plant multifaceted diversity](https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1111/ecog.05973)
 - [The influence of spatial errors in species occurrence data used in distribution models](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.1365-2664.2007.01408.x)
+### Machine learning:
+- [Caret tutorial](https://rebeccabarter.com/blog/2017-11-17-caret_tutorial)
+- [Caret tutorial 2](https://topepo.github.io/caret/)
+- [Classification models](https://www.geeksforgeeks.org/r-language/classification-in-r-programming/)
+- [Classification models 2](https://daviddalpiaz.github.io/r4sl/classification-overview.html)
 ### Species distribution models:
+- [Very high resolution interpolated climate surfaces for global land areas](https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.1276)
 - [Predictive habitat distribution models in ecology](https://www.sciencedirect.com/science/article/pii/S0304380000003549)
 - [Species Distribution Models: Ecological Explanation and Prediction Across Space and TimeWallace: A flexible platform for reproducible modeling of species niches and distributions built for community expansion](https://www.annualreviews.org/content/journals/10.1146/annurev.ecolsys.110308.120159)
 - [A standard protocol for reporting species distribution models](https://nsojournals.onlinelibrary.wiley.com/doi/10.1111/ecog.04960)
@@ -111,8 +115,9 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - [A new threshold selection method for species distribution models with presence-only data: Extracting the mutation point of the P/E curve by threshold regression](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.11208)
 - [Modelling the potential range of Agrilus planipennis in Europe according to current and future climate conditions](https://www.sciencedirect.com/science/article/pii/S2666719324000669)
 - [Choice of threshold alters projections of species range shifts under climate change](https://www.sciencedirect.com/science/article/abs/pii/S0304380011003814)
-
+- [Pseudo-absence and background data](https://damariszurell.github.io/EEC-MGC/b5_pseudoabsence.html)
+- [blockCV: An r package for generating spatially or environmentally separated folds for k-fold cross-validation of species distribution models](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13107)
+- [blockCV tutorial](https://github.com/rvalavi/blockcv)
 ---
-
 > [!NOTE]
 > Parte del material a usarse ha sido creado para workshops o tutoriales para ONGs creados por Chrystian Sosa, Andrés Mendez y Wanjiku Githu
