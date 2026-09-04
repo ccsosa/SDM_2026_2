@@ -1,14 +1,14 @@
 # SDM_2026_2
 Este repositorio contiene información, datos y código del curso de modelos de distribución de especie 2026-2 (Doctorado en ciencias biológicas UQ - UTP)
-
+---
 # Requisitos:
 - Instalar R
 - Instalar Java
 - Instalar RStudio
 - Acceso a Dropbox
 - Crear una cuenta de Github (ESTE REPO SE VOLVERÁ PRIVADO)
-
-
+- Computadora con al menos 8 GB de RAM
+---
 # Horarios: Sabados de 8 a 12
 
 > [!AVISO]
@@ -26,7 +26,7 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 >
 >Passcode:
 >JH6SD3TM
-
+---
 # Temas:
 
 ## 1.	Introducción a R y GIS (80% Practico, 20% teórico)
@@ -59,9 +59,8 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - 5.1.	Conservatismo de nicho
 - 5.2.	Transferencia de modelos
 - 5.3.	Consideraciones en el contexto de cambio climático
-
-
-#Paquetes necesarios:
+---
+# Paquetes necesarios:
 - raster
 - terra
 - sf
@@ -77,9 +76,8 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 
 # Dudas
 - ccsosa@uniquindio.edu.co
-
+---
 # Recursos
-
 ### Databases:
 - [GBIF (Global Biodiversity Information Facility)](https://www.gbif.org/)
 - [iDigBio (Integrated Digitized Biocollections)](https://www.idigbio.org/)
@@ -91,18 +89,14 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - [CHELSA](https://www.chelsa-climate.org/)
 - [NASA (earthdata)](https://www.earthdata.nasa.gov/topics/human-dimensions/data-access-tools)
 - [ENVIREM (ENVIronmental Rasters for Ecological Modeling)](https://envirem.github.io/)
-####GIS shapefiles:
+#### GIS shapefiles:
 - [GADM](https://gadm.org/)
 - [Worldclim](https://www.worldclim.org/data/index.html)
-### Data Curation (Recommended):
+### Data Curation 
 - [Spatial Data Quality Checks](https://knowledge.base.unocha.org/wiki/spaces/imtoolbox/pages/228622451/Geodata)
 - [Biodiversity informatics: managing and applying primary biodiversity data](https://royalsocietypublishing.org/doi/10.1098/rstb.2003.1439)
 - [Resolution in species distribution models shapes spatial patterns of plant multifaceted diversity](https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1111/ecog.05973)
 - [The influence of spatial errors in species occurrence data used in distribution models](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.1365-2664.2007.01408.x)
-### Data Curation:
-- [Spatial Data Quality Checks](https://knowledge.base.unocha.org/wiki/spaces/imtoolbox/pages/228622451/Geodata)
-- [Biodiversity informatics: managing and applying primary biodiversity data](https://royalsocietypublishing.org/doi/10.1098/rstb.2003.1439)
-- [Resolution in species distribution models shapes spatial patterns of plant multifaceted diversity](https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1111/ecog.05973)
 ### Species distribution models:
 - [Predictive habitat distribution models in ecology](https://www.sciencedirect.com/science/article/pii/S0304380000003549)
 - [Species Distribution Models: Ecological Explanation and Prediction Across Space and TimeWallace: A flexible platform for reproducible modeling of species niches and distributions built for community expansion](https://www.annualreviews.org/content/journals/10.1146/annurev.ecolsys.110308.120159)
@@ -116,6 +110,8 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - [A new threshold selection method for species distribution models with presence-only data: Extracting the mutation point of the P/E curve by threshold regression](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.11208)
 - [Modelling the potential range of Agrilus planipennis in Europe according to current and future climate conditions](https://www.sciencedirect.com/science/article/pii/S2666719324000669)
 - [Choice of threshold alters projections of species range shifts under climate change](https://www.sciencedirect.com/science/article/abs/pii/S0304380011003814)
+
+---
 
 > [!NOTA]
 > Parte del material a usarse ha sido creado para workshops o tutoriales para ONGs
