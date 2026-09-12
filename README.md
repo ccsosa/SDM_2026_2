@@ -29,9 +29,11 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 # Temas:
 
 ## 1.	Introducción a R y GIS (80% Practico, 20% teórico)
-- 1.1.	Introducción a R
+- 1.1.	Introducción a R: https://github.com/ccsosa/R_Examples
 - 1.2.	Introducción a GIS en R
-- 1.3.	Introducción a Machine learning en R
+- 1.3.	Introducción a Machine learning en R:
+	- https://lgatto.github.io/IntroMachineLearningWithR/an-introduction-to-machine-learning-with-r.html
+	- https://www.geeksforgeeks.org/r-machine-learning/introduction-to-machine-learning-in-r/
 - 1.4.	Github (Reproducibilidad de análisis): [https://github.com/hectornieto/cursoGit/tree/master]
 ## 2.	Introducción (100% teórico)
 - 2.1.	Introducción a los modelos de nicho.
@@ -74,7 +76,7 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - raster
 - wallace
 # Dudas
-- ccsosa@uniquindio.edu.co
+- ccsosaa@uniquindio.edu.co
 ---
 # Recursos
 ### Databases:
