@@ -41,20 +41,27 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - 2.3.	Nichos y distribuciones.
 - 2.4.	Diagrama BAM
 ## 3.	Preprocesamiento y modelación (80% Practico, 20% teórico) 
-- 3.1.	Limpieza de datos
+- 3.1.	Limpieza de datos:
+	- https://ropensci.github.io/CoordinateCleaner/
 - 3.2.	Obtención de datos
-- 3.3.	Limpieza taxonómica
+- 3.3.	Limpieza taxonómica: 
+	- https://cran.r-project.org/web/packages/TNRS/vignettes/TNRS_vignette.html
 - 3.4.	Selección de variables
-- 3.5.	Selección de algoritmo (tipos de algoritmo: MaxEnt, Random Forest, etc...)
-- 3.6.	Ensambles
+- 3.5.	Selección de algoritmo (tipos de algoritmo: MaxEnt, Random Forest, etc...):
+	- https://rspatial.r-universe.dev/dismo/doc/manual.html
+	- https://docs.gbif.org/course-data-use/en/ecological-niche-models.html
+	- https://docs.b-cubed.eu/tutorials/species-distribution-modelling-r/
+- 3.6.	Ensamblajes
 - 3.7.	Selección de método de background (Target group, environment, aleatorio, ecosystems [números parecidos entre ecosistemas])
-- 3.8.	Calibración en ENMEval
-- 3.9.	Diferencias en resolución espacial 
+- 3.8.	Calibración en ENMEval:
+	- https://jamiemkass.github.io/ENMeval/articles/ENMeval-2.0-vignette.html
+- 3.9.	Diferencias en resolución espacial
 ## 4.	Evaluación (80% Practico, 20% teórico)
 - 4.1.	Desempeño vs significancia estadística.
 - 4.2.	Métricas de desempeño y métodos estadísticos de validación.
 - 4.3.	¿Qué hacer con pocos datos?
-- 4.4.	Evaluación por bloques espaciales (BlockCV)
+- 4.4.	Evaluación por bloques espaciales (BlockCV):
+	- https://github.com/rvalavi/blockcv
 - 4.5.	Nicho realizado (Limitar a un espacio más realista)
 ## 5.	Transferencia de modelos de nicho en espacio y tiempo 90% Practico, 10% teórico)
 - 5.1.	Conservatismo de nicho
