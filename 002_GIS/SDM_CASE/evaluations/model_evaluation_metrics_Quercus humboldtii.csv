@@ -1,0 +1,2 @@
+Species,Best_Max_Depth,Best_Min_Samples_Leaf,Threshold_Rule,Threshold_Value,ROC_AUC_CV_Mean,ROC_AUC_CV_Std,TSS_Mean,Sensitivity_Mean,Specificity_Mean,Omission_Rate
+Quercus humboldtii,10,2,10% Omission Rate,0.4910642927024992,0.8593246629536475,0.04308096987989841,,,,

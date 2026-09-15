@@ -1,0 +1,2 @@
+Species,Best_Max_Depth,Best_Min_Samples_Leaf,Accuracy,Threshold_Rule,Threshold_Value,ROC_AUC_CV_Mean,ROC_AUC_CV_Std,TSS_Mean
+Juglans_neotrpica,5,1,0.9202097157368723,10% Omission Rate,0.5801564678602608,0.9021604976944473,0.042434007255556384,0.8414365562692918

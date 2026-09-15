@@ -139,3 +139,42 @@ ruta_salida <- "D:/PROGRAMAS/Dropbox/SDM_2026_2/POINTS/Bactris.html"
 
 x <- map_interactive_points(ruta_input,ruta_salida)
 x
+
+
+sum_propia <- function(A,B,C){
+  #OPCION 1
+  # resultado <- sum(A,B,C)
+  #OPCION 2
+   resultado <- A + B + C
+   #OPCION 3
+  # r1 <- A + B
+  # resultado <- r1 + C
+  # resultado <- sum(c(A,B,C))
+  # print(resultado)
+  return(resultado)
+}
+
+A <- 4
+B <- 5
+C <- 6
+
+sum_propia(A,B,C)
+
+
+A <- c(4,4,4,4,4)
+B <- c(5,5,5,5,5)
+C <- c(6,6,6,6,6)
+sum_propia(A,B,C)
+
+
+
+
+tarea <- function(points){
+  #. nrow print
+  print()
+  #promedio lon
+  print()
+  #promedio lat
+  
+  return(tapply(points$countryCode,points$countryCode,length))
+}

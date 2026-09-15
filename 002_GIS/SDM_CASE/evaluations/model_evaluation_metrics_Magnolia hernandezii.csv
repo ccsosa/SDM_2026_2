@@ -1,0 +1,2 @@
+Species,Best_Max_Depth,Best_Min_Samples_Leaf,Accuracy,Threshold_Rule,Threshold_Value,ROC_AUC_CV_Mean,ROC_AUC_CV_Std,TSS_Mean
+Magnolia hernandezii,5,5,0.857420609,10% Omission Rate,0.475376817,0.795750375,0.068710224,0.744542227
