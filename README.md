@@ -32,7 +32,10 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - 1.1.	Introducción a R: https://github.com/ccsosa/R_Examples
 	- [https://www.youtube.com/watch?v=D8q2Q69fT8Y]
 	- [https://www.youtube.com/watch?v=kans9xutX1g]
-- 1.2.	Introducción a GIS en R
+- 1.2.	Introducción a GIS en R:
+	- [https://mdl.library.utoronto.ca/technology/tutorials/introduction-gis-using-r]
+	- [https://onsgeo.github.io/geospatial-training/docs/intro_to_gis_in_r]
+	- [https://www.ecologi.st/spatial-r/]
 - 1.3.	Introducción a Machine learning en R:
 	- https://lgatto.github.io/IntroMachineLearningWithR/an-introduction-to-machine-learning-with-r.html
 	- https://www.geeksforgeeks.org/r-machine-learning/introduction-to-machine-learning-in-r/
