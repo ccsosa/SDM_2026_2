@@ -30,6 +30,8 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 
 ## 1.	Introducción a R y GIS (80% Practico, 20% teórico)
 - 1.1.	Introducción a R: https://github.com/ccsosa/R_Examples
+	- [https://www.youtube.com/watch?v=D8q2Q69fT8Y]
+	- [https://www.youtube.com/watch?v=kans9xutX1g]
 - 1.2.	Introducción a GIS en R
 - 1.3.	Introducción a Machine learning en R:
 	- https://lgatto.github.io/IntroMachineLearningWithR/an-introduction-to-machine-learning-with-r.html
