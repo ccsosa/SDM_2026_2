@@ -43,6 +43,7 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 ## 2.	Introducción (100% teórico)
 - 2.1.	Introducción a los modelos de nicho.
 - 2.2.	Conceptos de nicho ecológico.
+	-[https://www.pnas.org/doi/10.1073/pnas.0901637106]
 - 2.3.	Nichos y distribuciones.
 - 2.4.	Diagrama BAM
 ## 3.	Preprocesamiento y modelación (80% Practico, 20% teórico) 
@@ -57,7 +58,10 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 	- https://docs.gbif.org/course-data-use/en/ecological-niche-models.html
 	- https://docs.b-cubed.eu/tutorials/species-distribution-modelling-r/
 - 3.6.	Ensamblajes
+	- [https://biomodhub.github.io/biomod2/]
+	- [https://damariszurell.github.io/EEC-MGC/b7_SDM_ensembles.html]
 - 3.7.	Selección de método de background (Target group, environment, aleatorio, ecosystems [números parecidos entre ecosistemas])
+	- [https://damariszurell.github.io/EEC-MGC/b5_pseudoabsence.html#41_Spatial_thinning]
 - 3.8.	Calibración en ENMEval:
 	- https://jamiemkass.github.io/ENMeval/articles/ENMeval-2.0-vignette.html
 - 3.9.	Diferencias en resolución espacial
