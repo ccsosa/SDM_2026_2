@@ -39,6 +39,7 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - 1.3.	Introducción a Machine learning en R:
 	- https://lgatto.github.io/IntroMachineLearningWithR/an-introduction-to-machine-learning-with-r.html
 	- https://www.geeksforgeeks.org/r-machine-learning/introduction-to-machine-learning-in-r/
+	- https://www.geeksforgeeks.org/r-language/classification-in-r-programming/
 - 1.4.	Github (Reproducibilidad de análisis): [https://github.com/hectornieto/cursoGit/tree/master]
 ## 2.	Introducción (100% teórico)
 - 2.1.	Introducción a los modelos de nicho.
@@ -136,6 +137,9 @@ Este repositorio contiene información, datos y código del curso de modelos de 
 - [Pseudo-absence and background data](https://damariszurell.github.io/EEC-MGC/b5_pseudoabsence.html)
 - [blockCV: An r package for generating spatially or environmentally separated folds for k-fold cross-validation of species distribution models](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13107)
 - [blockCV tutorial](https://github.com/rvalavi/blockcv)
+- [https://medium.com/@anton.biatov/species-distribution-modeling-sdm-with-random-forest-in-r-on-colab-bc6f7f1d4a5b]
+- [https://besjournals.onlinelibrary.wiley.com/doi/epdf/10.1111/2041-210X.13874]
+- [https://tidyecology.com/posts/pseudo-absence-selection-sdm/]
 ---
 > [!NOTE]
 > Parte del material a usarse ha sido creado para workshops o tutoriales para ONGs creados por Chrystian Sosa, Andrés Mendez y Wanjiku Githu

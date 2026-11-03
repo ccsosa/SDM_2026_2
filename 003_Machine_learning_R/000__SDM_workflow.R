@@ -6,7 +6,7 @@ library(dismo)
 # library(sdm)
 library(geodata)
 # library(spThin)
-################################################################################
+################################################################################+
 #define dir
 dir <- "D:/REPO_GITHUB/SDM_2026_2/003_Machine_learning_R"
 
@@ -252,49 +252,60 @@ terra::writeRaster(pr_new_area,paste0(dir,"/","cloglog_Target_region.tif"))
 terra::writeRaster(pr_new_area_thr,paste0(dir,"/","cloglog_thr_Target_region.tif"))
 
 ################################################################################
-# #option 2 (avoid sampling  bias by regular)
-# bg_pts_2 <- terra::spatSample(hullRaster, size = 5000, method = "regular", xy = TRUE, na.rm = TRUE)
-# bg_coords_2 <- bg_pts_2[, c("x", "y")]
-# #option 3 (bias sampling)
-# # 1. Crear un buffer de exclusión de 20 km alrededor de cada presencia
-# pres_buffer <- terra::buffer(occ_sp, width = 20000) 
-# 
-# # 2. Rasterizar el área de exclusión (asignando NA donde esté el buffer)
-# exclusion_mask <- terra::rasterize(pres_buffer, env_pred[[1]], field = NA, background = 1)
-# 
-# # 3. Combinar el hullRaster con la máscara de exclusión
-# hull_exclusive <- terra::mask(hullRaster, exclusion_mask)
-# 
-# # 4. Muestrear los puntos aleatorios fuera de la zona prohibida
-# set.seed(42)
-# bg_pts_3 <- terra::spatSample(hull_exclusive, size = 10000, method = "random", xy = TRUE, na.rm = TRUE)
-# bg_coords_3 <- bg_pts_3[, c("x", "y")]
-# 
-# #plot
-# # Configurar la ventana gráfica en 1 fila y 3 columnas
-# par(mfrow = c(1, 3), mar = c(3, 3, 2, 1))
-# 
-# # Definir límites geográficos comunes para que todas tengan el mismo zoom
-# xlims <- c(min(presence$lon) - 5, max(presence$lon) + 5)
-# ylims <- c(min(presence$lat) - 5, max(presence$lat) + 5)
-# 
-# # --- Opción 1: Background Aleatorio Simple ---
-# plot(world_shp, xlim = xlims, ylim = ylims, col = "gray90", border = "gray70", 
-#      main = "1. Aleatorio Simple")
-# points(bg_coords_1, col = adjustcolor("blue", alpha.f = 0.3), pch = 16, cex = 0.4)
-# points(presence[, c("lon", "lat")], col = "red", pch = 16, cex = 0.7)
-# 
-# # --- Opción 2: Background Regular / Malla ---
-# plot(world_shp, xlim = xlims, ylim = ylims, col = "gray90", border = "gray70", 
-#      main = "2. Regular (Malla)")
-# points(bg_coords_2, col = adjustcolor("darkgreen", alpha.f = 0.4), pch = 16, cex = 0.4)
-# points(presence[, c("lon", "lat")], col = "red", pch = 16, cex = 0.7)
-# 
-# # --- Opción 3: Background con Exclusión ---
-# plot(world_shp, xlim = xlims, ylim = ylims, col = "gray90", border = "gray70", 
-#      main = "3. Con Buffer de Exclusión")
-# points(bg_coords_3, col = adjustcolor("purple", alpha.f = 0.3), pch = 16, cex = 0.4)
-# points(presence[, c("lon", "lat")], col = "red", pch = 16, cex = 0.7)
-# 
-# # Restaurar la ventana gráfica por defecto a 1x1
-# par(mfrow = c(1, 1))
+#option 2 (avoid sampling  bias by regular)
+bg_pts_2 <- terra::spatSample(hullRaster, size = 5000, method = "regular", xy = TRUE, na.rm = TRUE)
+bg_coords_2 <- bg_pts_2[, c("x", "y")]
+#option 3 (bias sampling)
+# 1. Crear un buffer de exclusión de 20 km alrededor de cada presencia
+pres_buffer <- terra::buffer(occ_sp, width = 20000)
+
+# 2. Rasterizar el área de exclusión (asignando NA donde esté el buffer)
+exclusion_mask <- terra::rasterize(pres_buffer, env_pred[[1]], field = NA, background = 1)
+
+# 3. Combinar el hullRaster con la máscara de exclusión
+hull_exclusive <- terra::mask(hullRaster, exclusion_mask)
+
+# 4. Muestrear los puntos aleatorios fuera de la zona prohibida
+set.seed(42)
+bg_pts_3 <- terra::spatSample(hull_exclusive, size = 10000, method = "random", xy = TRUE, na.rm = TRUE)
+bg_coords_3 <- bg_pts_3[, c("x", "y")]
+
+# 5. Muestrear los puntos aleatorios fuera de la zona prohibida
+set.seed(42)
+bg_pts_4 <- terra::spatSample(hull_exclusive, size = 10000, method = "stratified", xy = TRUE, na.rm = TRUE)
+bg_coords_4 <- bg_pts_4[, c("x", "y")]
+
+#plot
+# Configurar la ventana gráfica en 1 fila y 3 columnas
+par(mfrow = c(2, 2), mar = c(3, 3, 2, 1))
+
+# Definir límites geográficos comunes para que todas tengan el mismo zoom
+xlims <- c(min(presence$lon) - 5, max(presence$lon) + 5)
+ylims <- c(min(presence$lat) - 5, max(presence$lat) + 5)
+
+# --- Opción 1: Background Aleatorio Simple ---
+plot(world_shp, xlim = xlims, ylim = ylims, col = "gray90", border = "gray70",
+     main = "1. Aleatorio Simple")
+points(bg_coords_1, col = adjustcolor("blue", alpha.f = 0.3), pch = 16, cex = 0.4)
+points(presence[, c("lon", "lat")], col = "red", pch = 16, cex = 0.7)
+
+# --- Opción 2: Background Regular / Malla ---
+plot(world_shp, xlim = xlims, ylim = ylims, col = "gray90", border = "gray70",
+     main = "2. Regular (Malla)")
+points(bg_coords_2, col = adjustcolor("darkgreen", alpha.f = 0.4), pch = 16, cex = 0.4)
+points(presence[, c("lon", "lat")], col = "red", pch = 16, cex = 0.7)
+
+# --- Opción 3: Background con Exclusión ---
+plot(world_shp, xlim = xlims, ylim = ylims, col = "gray90", border = "gray70",
+     main = "3. Con Buffer de Exclusión")
+points(bg_coords_3, col = adjustcolor("purple", alpha.f = 0.3), pch = 16, cex = 0.4)
+points(presence[, c("lon", "lat")], col = "red", pch = 16, cex = 0.7)
+
+# --- Opción 4: Background con Exclusión stratified---
+plot(world_shp, xlim = xlims, ylim = ylims, col = "gray90", border = "gray70",
+     main = "4. stratified")
+points(bg_coords_4, col = adjustcolor("orange", alpha.f = 0.3), pch = 16, cex = 0.4)
+points(presence[, c("lon", "lat")], col = "red", pch = 16, cex = 0.7)
+
+# Restaurar la ventana gráfica por defecto a 1x1
+par(mfrow = c(1, 1))
