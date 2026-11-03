@@ -289,9 +289,17 @@ rng <- range(global(models_thr, "range", na.rm = TRUE), na.rm = TRUE)
 plot(models_thr, range = rng, nc = 2)
 models_thr <- c(pr_thr_RF,pr_thr_glm,pr_thr_svm)
 m_sum <- sum(models_thr,na.rm=T)
-par(mfrow=c(1,1))
+m_sum_thr <- m_sum
+m_sum_thr[which(m_sum_thr[]<3)] <- NA 
+m_sum_thr[which(m_sum_thr[]==3)] <- 1 
+par(mfrow=c(1,2))
 plot(m_sum, main='Ensemble (Number of models)')
 plot(wrld_simpl, add=TRUE, border='dark grey')
+plot(m_sum_thr, main='presence/absence (>2 models)')
+plot(wrld_simpl, add=TRUE, border='dark grey')
+points(presence[row.names(pres_train), c("lon","lat")], pch='+')
+points(bg_coords_1[row.names(back_train), c("x","y")], pch='-', cex=0.25)
+
 ################################################################################
 #compare metrics
 evs <- list(RF = ev_RF, GLM = ev_glm, svm = esvm,ensemble = e)
