@@ -36,22 +36,22 @@ bio1 <- env_pred[[which(names(env_pred)=="bio_1")]]
 #World´s shapefile 
 world_shp <- geodata::world(resolution = 4,level=0,path=dir)
 ################################################################################
-#calling raster of Coffee region!
-raster_dir <- "D:/REPO_GITHUB/SDM_2026_2/003_Machine_learning_R/INPUTS/raster_EJE_CAFETERO"
-env_pred_proj_area <- terra::rast(list.files(raster_dir,pattern = "\\.tif$",full.names = T))
-names(env_pred_proj_area) <- sub("\\.tif","",names(env_pred_proj_area))
-rm_env <- which(names(env_pred_proj_area) %in% c(
-  "aridity",
-  "bio_8",
-  "bio_9", 
-  "bio_10", 
-  "bio_11", 
-  "bio_13", 
-  "bio_14", 
-  "bio_18", 
-  "bio_19"))
-# remove some climatic variables (problematic)
-env_pred_proj_area <- env_pred_proj_area[[-rm_env]]
+# #calling raster of Coffee region!
+# raster_dir <- "D:/REPO_GITHUB/SDM_2026_2/003_Machine_learning_R/INPUTS/raster_EJE_CAFETERO"
+# env_pred_proj_area <- terra::rast(list.files(raster_dir,pattern = "\\.tif$",full.names = T))
+# names(env_pred_proj_area) <- sub("\\.tif","",names(env_pred_proj_area))
+# rm_env <- which(names(env_pred_proj_area) %in% c(
+#   "aridity",
+#   "bio_8",
+#   "bio_9",
+#   "bio_10",
+#   "bio_11",
+#   "bio_13",
+#   "bio_14",
+#   "bio_18",
+#   "bio_19"))
+# # remove some climatic variables (problematic)
+# env_pred_proj_area <- env_pred_proj_area[[-rm_env]]
 ################################################################################
 #load occurrences
 presence_original <- read.csv(paste0(dir,"/","INPUTS","/","PUNTOS_CLASE_COORD_CLEAR.csv"))
@@ -250,6 +250,15 @@ models <- c(pr_RF,pr_glm,pr_svm)
 names(models) <- c("rf","glm", "svm")
 
 m <- median(models,na.rm=T)
+m2 <- mean(models,na.rm=T)
+sd_ens  <- terra::stdev(models, na.rm = TRUE)                 # desviación estándar
+mad_ens <- terra::app(models, stats::mad, na.rm = TRUE)       # MAD (mediana de desviaciones absolutas)
+
+names(sd_ens)  <- "sd"
+names(mad_ens) <- "mad"
+
+plot(c(m,mad_ens))
+plot(c(m2,sd_ens))
 all_m <- c(models, m)
 
 # Escala común: mínimo y máximo global de todas las capas
