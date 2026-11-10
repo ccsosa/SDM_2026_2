@@ -52,14 +52,18 @@ for(i in seq_along(TIMES)){
     writeRaster(SDM_GCM_sum, file.path(ssp_dir, "gcm_sum_SP.tif"), overwrite = TRUE)
     
     SDM_GCM_conc <- SDM_GCM_sum
-    SDM_GCM_conc[which(SDM_GCM_conc[] < length(MODELS))]  <- 0
-    SDM_GCM_conc[which(SDM_GCM_conc[] == length(MODELS))] <- 1
+    SDM_GCM_conc[which(SDM_GCM_conc[] < 2)]  <- 0
+    SDM_GCM_conc[which(SDM_GCM_conc[] >= 2)] <- 1
+    SDM_GCM_conc[which(SDM_GCM_conc[] ==0)]  <- NA
+    
     writeRaster(SDM_GCM_conc, file.path(ssp_dir, "gcm_consensus_SP.tif"), overwrite = TRUE)
     
     SDM_GCM_conc[which(SDM_GCM_conc[] == 1)] <- 2
     
-    changes <- SDM_GCM_conc - phr_current
+    changes <- subst(SDM_GCM_conc, NA, 0) - subst(phr_current, NA, 0)
     names(changes) <- paste0("ssp", SSPS[j], "_changes_", TIMES[i])
+    changes[which(changes[] ==0)]  <- NA
+    
     writeRaster(changes, file.path(ssp_dir, "changes_SP.tif"), overwrite = TRUE)
     
     changes_list[[j]] <- changes
@@ -75,8 +79,8 @@ areas <- terra::expanse(changes_list_times,unit="km",byValue=T,usenames=T)
 df <- areas
 
 df$ssp    <- sub("_changes.*", "", df$layer)
-df$cambio <- factor(df$value, levels = c(-1, 1),
-                    labels = c("Pérdida", "Estable"))
+df$cambio <- factor(df$value, levels = c(-1, 1,2),
+                    labels = c("Pérdida", "Estable","Nuevo"))
 df$area_plot <- ifelse(df$value == -1, -df$area, df$area)
 
 p <- ggplot(df, aes(x = cambio, y = area_plot, fill = ssp)) +
@@ -121,6 +125,28 @@ res_list <- lapply(names(r), function(nm){
 mun <- bind_rows(res_list)
 write.csv(mun, "D:/REPO_GITHUB/SDM_2026_2/007_Climate_change/Future/changes_by_municipality_SP.csv",
           row.names = FALSE)
+
+
+#cambio relativo
+SSP_CR <- list()
+for(ssp in c("ssp245","ssp370")){
+  print(ssp)
+  # x <- df[df$value %in% c(-1,1),]
+  x <- df[which(df$ssp== ssp),]
+  # print(x)
+  
+  SSP_CR[[ssp]] <- data.frame(
+    SSP=ssp,
+    CR=
+  (
+    ((sum(x$area[x$value %in% c(2,1)])-
+  sum(x$area[x$value %in% c(-1,1)])))
+  /
+    sum(x$area[x$value %in% c(-1,1)])
+    )*100
+  )  
+}
+SSP_CR <- do.call(rbind,SSP_CR)
 
 # ref <- "ssp245"   # SSP usado para ordenar
 # ord <- mun %>% filter(ssp == ref) %>% arrange(gain) %>% pull(mpio)

@@ -44,13 +44,17 @@ for(i in seq_along(TIMES)){
     writeRaster(SDM_GCM_sum, file.path(ssp_dir, "gcm_sum.tif"), overwrite = TRUE)
     
     SDM_GCM_conc <- SDM_GCM_sum
-    SDM_GCM_conc[which(SDM_GCM_conc[] < length(MODELS))]  <- 0
-    SDM_GCM_conc[which(SDM_GCM_conc[] == length(MODELS))] <- 1
+    SDM_GCM_conc[which(SDM_GCM_conc[] < 2)]  <- 0
+    SDM_GCM_conc[which(SDM_GCM_conc[] >= 2)] <- 1
+    SDM_GCM_conc[which(SDM_GCM_conc[] ==0)]  <- NA
+    
     writeRaster(SDM_GCM_conc, file.path(ssp_dir, "gcm_consensus.tif"), overwrite = TRUE)
     
     SDM_GCM_conc[which(SDM_GCM_conc[] == 1)] <- 2
     
-    changes <- SDM_GCM_conc - phr_current
+    changes <- subst(SDM_GCM_conc, NA, 0) - subst(phr_current, NA, 0)
+    changes[which(changes[] ==0)]  <- NA
+    
     names(changes) <- paste0("ssp", SSPS[j], "_changes_", TIMES[i])
     writeRaster(changes, file.path(ssp_dir, "changes.tif"), overwrite = TRUE)
     
@@ -67,8 +71,8 @@ areas <- terra::expanse(changes_list_times,unit="km",byValue=T,usenames=T)
 df <- areas
 
 df$ssp    <- sub("_changes.*", "", df$layer)
-df$cambio <- factor(df$value, levels = c(-1, 1),
-                    labels = c("Pérdida", "Estable"))
+df$cambio <- factor(df$value, levels = c(-1, 1,2),
+                    labels = c("Pérdida", "Estable","Nuevo"))
 df$area_plot <- ifelse(df$value == -1, -df$area, df$area)
 
 p <- ggplot(df, aes(x = cambio, y = area_plot, fill = ssp)) +
@@ -87,3 +91,25 @@ p <- ggplot(df, aes(x = cambio, y = area_plot, fill = ssp)) +
 p
 ggsave("D:/REPO_GITHUB/SDM_2026_2/007_Climate_change/Future/barplot_changes.png",
        p, width = 6, height = 4.5, dpi = 300)
+
+
+#cambio relativo
+SSP_CR <- list()
+for(ssp in c("ssp245","ssp370")){
+  print(ssp)
+  # x <- df[df$value %in% c(-1,1),]
+  x <- df[which(df$ssp== ssp),]
+  # print(x)
+  
+  SSP_CR[[ssp]] <- data.frame(
+    SSP=ssp,
+    CR=
+      (
+        ((sum(x$area[x$value %in% c(2,1)])-
+            sum(x$area[x$value %in% c(-1,1)])))
+        /
+          sum(x$area[x$value %in% c(-1,1)])
+      )*100
+  )  
+}
+SSP_CR <- do.call(rbind,SSP_CR)
