@@ -1,0 +1,103 @@
+"mpio","ssp","loss","stable","gain"
+"Aguadas (Caldas)","ssp245",-51.8549033770759,0.850003617087603,0
+"Anserma (Caldas)","ssp245",-102.93398036553,22.968033584526,0
+"Aranzazú (Caldas)","ssp245",-20.4150079910044,0.850537348960757,0
+"Belalcázar (Caldas)","ssp245",-90.2040038027766,0,0
+"Chinchiná (Caldas)","ssp245",-83.3952566772993,11.063045432139,0
+"Filadelfia (Caldas)","ssp245",-105.4726806775,2.55169029898083,0
+"La Dorada (Caldas)","ssp245",NA,NA,NA
+"La Merced (Caldas)","ssp245",-25.5142953116413,0.850492408312798,0
+"Manizales (Caldas)","ssp245",-205.053892516189,15.3154565373384,0
+"Manzanares (Caldas)","ssp245",NA,NA,NA
+"Marmato (Caldas)","ssp245",-4.25143348833919,0,0
+"Marquetalia (Caldas)","ssp245",-6.80453333782315,0,0
+"Marulanda (Caldas)","ssp245",NA,NA,NA
+"Neira (Caldas)","ssp245",-116.548764644763,3.40290061943311,0
+"Pácora (Caldas)","ssp245",-40.8151174930716,0.850263502406836,0
+"Palestina (Caldas)","ssp245",-79.9844322836431,0.850876137423754,0
+"Pensilvania (Caldas)","ssp245",-10.203486629469,8.50284378842032,0
+"Riosucio (Caldas)","ssp245",-24.6622588806118,0,0
+"Risaralda (Caldas)","ssp245",-111.45751591621,4.25382162763697,0
+"Salamina (Caldas)","ssp245",-4.25209859375167,0,0
+"Samaná (Caldas)","ssp245",-91.8264060620698,3.40127130397224,0
+"Supía (Caldas)","ssp245",-34.8654932735239,0,0
+"Victoria (Caldas)","ssp245",-21.2631164076544,0,0
+"Villamaría (Caldas)","ssp245",-14.4662705515438,4.254825151788,0
+"Viterbo (Caldas)","ssp245",-58.7136673997552,0,0
+"Armenia (Quindío)","ssp245",-77.4908900370602,27.2488645339969,0
+"Buenavista (Quindío)","ssp245",-35.7706381914748,0,0
+"Córdoba (Quindío)","ssp245",-28.9570618306254,5.11006345853394,0
+"Calarcá (Quindío)","ssp245",-75.7935621066241,22.9931359993059,0
+"Circasia (Quindío)","ssp245",-14.4748238583282,3.40586870485085,0
+"Filandia (Quindío)","ssp245",-28.0968348426558,22.1374249708841,0
+"Génova (Quindío)","ssp245",-37.480807151104,9.37005601595694,0
+"La Tebaida (Quindío)","ssp245",-82.6060073373209,0,0
+"Montenegro (Quindío)","ssp245",-107.292402532699,8.51495533811873,0
+"Pijao (Quindío)","ssp245",-45.9938659207098,5.96203059605288,0
+"Quimbaya (Quindío)","ssp245",-62.1553704248219,1.7028229790858,0
+"Salento (Quindío)","ssp245",-5.10893281834733,0,0
+"Apía (Risaralda)","ssp245",-7.65783176709706,0,0
+"Balboa (Risaralda)","ssp245",-23.8293533612648,0,0
+"Belén de Umbría (Risaralda)","ssp245",-34.879344357496,1.70143917961937,0
+"Dosquebradas (Risaralda)","ssp245",-20.4281535558974,16.1721953622603,0
+"Guática (Risaralda)","ssp245",-17.0112938332193,2.55167912511337,0
+"La Celia (Risaralda)","ssp245",NA,NA,NA
+"La Virginia (Risaralda)","ssp245",-11.0638672087291,0,0
+"Marsella (Risaralda)","ssp245",-122.548370387895,1.70216123779583,0
+"Mistrato (Risaralda)","ssp245",-282.353620321977,131.820939422573,0
+"Pereira (Risaralda)","ssp245",-246.848959703791,45.9660623722544,0
+"Pueblo Rico (Risaralda)","ssp245",-109.7233805935,57.840794538715,0
+"Quinchía (Risaralda)","ssp245",-31.4709975294463,5.10351414145744,0
+"Santa Rosa de Cabal (Risaralda)","ssp245",-10.2126237732551,8.51028817038226,0
+"Santuario (Risaralda)","ssp245",-37.4425134656115,0,0
+"Aguadas (Caldas)","ssp370",-39.1035396980926,1.70013823596799,0
+"Anserma (Caldas)","ssp370",-93.5765412116725,38.2802096527931,0
+"Aranzazú (Caldas)","ssp370",-19.5645922410556,4.25295356907362,0
+"Belalcázar (Caldas)","ssp370",-94.458879848928,2.55289213445991,0
+"Chinchiná (Caldas)","ssp370",-78.2896901206474,28.0827651426626,0
+"Filadelfia (Caldas)","ssp370",-78.2556307534294,5.1033694240942,0
+"La Dorada (Caldas)","ssp370",NA,NA,NA
+"La Merced (Caldas)","ssp370",-15.3085000243647,5.95343543915033,0
+"Manizales (Caldas)","ssp370",-173.571081180803,48.5003086702933,0
+"Manzanares (Caldas)","ssp370",NA,NA,NA
+"Marmato (Caldas)","ssp370",-4.25143348833919,0,0
+"Marquetalia (Caldas)","ssp370",-7.65505947789061,0,0
+"Marulanda (Caldas)","ssp370",NA,NA,NA
+"Neira (Caldas)","ssp370",-106.339669844903,17.0144596277193,0
+"Pácora (Caldas)","ssp370",-25.5093354429539,2.55094082818794,0
+"Palestina (Caldas)","ssp370",-67.2210248883018,13.6143901043106,0
+"Pensilvania (Caldas)","ssp370",-13.605216025339,10.2034172047664,0
+"Riosucio (Caldas)","ssp370",-31.4653337503376,4.25217910485589,0
+"Risaralda (Caldas)","ssp370",-109.755774902853,15.3143202923783,0
+"Salamina (Caldas)","ssp370",-3.40171976287889,0.850378830872774,0
+"Samaná (Caldas)","ssp370",-106.28182939385,5.95185436010432,0
+"Supía (Caldas)","ssp370",-28.0621657842507,0,0
+"Victoria (Caldas)","ssp370",-19.562234957714,0,0
+"Villamaría (Caldas)","ssp370",-15.317535003415,12.7644963842539,0
+"Viterbo (Caldas)","ssp370",-78.2837610790978,0.850811879170239,0
+"Armenia (Quindío)","ssp370",-81.7483386521843,25.5458680727711,0
+"Buenavista (Quindío)","ssp370",-34.9189563076506,0.851681883824229,0
+"Córdoba (Quindío)","ssp370",-18.7368524497252,10.2200899664941,0
+"Calarcá (Quindío)","ssp370",-68.9806849940252,33.212226327197,0
+"Circasia (Quindío)","ssp370",-17.0292470985295,0.851445464649618,0
+"Filandia (Quindío)","ssp370",-45.1250798314599,10.2173648048542,0
+"Génova (Quindío)","ssp370",-24.7030115126221,15.3330355347847,0
+"La Tebaida (Quindío)","ssp370",-81.7544093022798,0,0
+"Montenegro (Quindío)","ssp370",-114.104341900073,1.70301597074521,0
+"Pijao (Quindío)","ssp370",-40.0314808157766,7.66554088618678,0
+"Quimbaya (Quindío)","ssp370",-68.9668175232311,0,0
+"Salento (Quindío)","ssp370",-7.66326908960533,0,0
+"Apía (Risaralda)","ssp370",-28.0767861426714,0,0
+"Balboa (Risaralda)","ssp370",-72.3397701879336,0,0
+"Belén de Umbría (Risaralda)","ssp370",-54.4458035445376,8.50702012865287,0
+"Dosquebradas (Risaralda)","ssp370",-25.5350480677589,11.0651794822891,0
+"Guática (Risaralda)","ssp370",-14.4595482428362,6.80457791069889,0
+"La Celia (Risaralda)","ssp370",-2.55290351869184,0,0
+"La Virginia (Risaralda)","ssp370",-27.2344451773602,0,0
+"Marsella (Risaralda)","ssp370",-133.611631044323,4.25503391505581,0
+"Mistrato (Risaralda)","ssp370",-288.304750744463,152.23623465567,0
+"Pereira (Risaralda)","ssp370",-305.581668092584,30.6442865236936,0
+"Pueblo Rico (Risaralda)","ssp370",-147.150843659464,91.8647612671978,0
+"Quinchía (Risaralda)","ssp370",-24.666575790189,8.50570846044409,0
+"Santa Rosa de Cabal (Risaralda)","ssp370",-16.1700273739917,6.80823052579331,0
+"Santuario (Risaralda)","ssp370",-58.71714962593,0,0
